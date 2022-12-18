@@ -1,0 +1,22 @@
+.popup__sumbit-button {
+  width: 358px;
+  background: #000000;
+  border-radius: 2px;
+  color: #FFFFFF;
+  padding: 14px 0 18px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+.popup__sumbit-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 767px) {
+  .popup__sumbit-button {
+    width: 238px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+ }
