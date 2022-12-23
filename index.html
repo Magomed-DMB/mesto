@@ -9,79 +9,77 @@
 </head>
 <body class="page">
   <header class="header">
-    <img src="./images/Vector.png" alt="Логотип" class="header__logo">
+    <img src="./images/logo.svg" alt="Логотип" class="header__logo">
   </header>
   <main class="content">
     <section class="profile">
       <img src="./images/avatar.png" alt="Фото профиля" class="profile__avatar">
       <div class="profile__info">
         <h1 class="profile__name">Жак-Ив Кусто</h1>
-        <button class="profile__edit-button"></button>
+        <button class="profile__edit-button" type="button"></button>
         <p class="profile__description">Исследователь океана</p>
       </div>
-      <button class="profile__add-button"></button>
+      <button class="profile__add-button" type="button"></button>
     </section>
-    <section class="elements">
-      <div class="element">
-        <figure class="element__card">
+    <section class="element">
+        <article class="element__card">
           <img src="./images/cards/vovnushki-1.jpg" alt="Карачаевск" class="element__img">
-          <figcaption class="element__figcaption">
+          <div class="element__figcaption">
             <h2 class="element__title">Вовнушки</h2>
-            <button class="element__like-button"></button>
-          </figcaption>
-        </figure>
-        <figure class="element__card">
+            <button class="element__like-button" type="button"></button>
+          </div>
+        </article>
+        <article class="element__card">
           <img src="./images/cards/kirill-pershin-2.png" alt="Гора Эльбрус" class="element__img">
-          <figcaption class="element__figcaption">
+          <div class="element__figcaption">
             <h2 class="element__title">Гора Эльбрус</h2>
-            <button class="element__like-button"></button>
-          </figcaption>
-        </figure>
-        <figure class="element__card">
+            <button class="element__like-button" type="button"></button>
+          </div>
+        </article>
+        <article class="element__card">
           <img src="./images/cards/kirill-pershin-3.png" alt="Домбай" class="element__img">
-          <figcaption class="element__figcaption">
+          <div class="element__figcaption">
             <h2 class="element__title">Домбай</h2>
-            <button class="element__like-button"></button>
-          </figcaption>
-        </figure>
-        <figure class="element__card">
+            <button class="element__like-button" type="button"></button>
+          </div>
+        </article>
+        <article class="element__card">
           <img src="./images/cards/kirill-pershin-2.png" alt="Гора Эльбрус" class="element__img">
-          <figcaption class="element__figcaption">
+          <div class="element__figcaption">
             <h2 class="element__title">Гора Эльбрус</h2>
-            <button class="element__like-button"></button>
-          </figcaption>
-        </figure>
-        <figure class="element__card">
+            <button class="element__like-button" type="button"></button>
+          </div>
+        </article>
+        <article class="element__card">
           <img src="./images/cards/kirill-pershin-3.png" alt="Домбай" class="element__img">
-          <figcaption class="element__figcaption">
+          <div class="element__figcaption">
             <h2 class="element__title">Домбай</h2>
-            <button class="element__like-button"></button>
-          </figcaption>
-        </figure>
-        <figure class="element__card">
+            <button class="element__like-button" type="button"></button>
+          </div>
+        </article>
+        <article class="element__card">
           <img src="./images/cards/kirill-pershin-1.png" alt="Карачаевск" class="element__img">
-          <figcaption class="element__figcaption">
+          <div class="element__figcaption">
             <h2 class="element__title">Карачаевск</h2>
-            <button class="element__like-button"></button>
-          </figcaption>
-        </figure>
-      </div>
+            <button class="element__like-button" type="button"></button>
+          </div>
+        </article>
     </section>
-    <div class="popup">
-      <div class="popup__content">
-        <button class="popup__close-button"></button>
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <form id="popup__form">
-          <input type="text" placeholder="Имя" class="popup__name" value="Жак-Ив Кусто">
-          <input type="text" placeholder="О себе" class="popup__text" value="Исследователь океана">
-          <button class="popup__sumbit-button" type="submit">Сохранить</button>
-        </form>
-      </div>
-    </div>
   </main>
   <footer class="footer">
     <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
   </footer>
+  <div class="popup">
+    <div class="popup__container">
+      <button class="popup__close-button" type="button"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form id="popup__form" action="" method="post">
+        <input type="name" placeholder="Имя" class="popup__input popup__input_type_name" value="Жак-Ив Кусто" name="name">
+        <input type="text" placeholder="О себе" class="popup__input popup__input_type_text" value="Исследователь океана" name="text">
+        <button class="popup__sumbit-button" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
