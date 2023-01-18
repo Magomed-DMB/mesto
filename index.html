@@ -22,8 +22,9 @@
       <button class="profile__add-button" type="button"></button>
     </section>
     <section class="element">
-        <article class="element__card">
-          <img src="./images/cards/vovnushki-1.jpg" alt="Карачаевск" class="element__img">
+        <!-- <article class="element__card">
+          <button class="element__delete-button" type="button"></button>
+          <img src="./images/cards/vovnushki-1.jpg" alt="Вовнушки" class="element__img">
           <div class="element__figcaption">
             <h2 class="element__title">Вовнушки</h2>
             <button class="element__like-button" type="button"></button>
@@ -63,23 +64,47 @@
             <h2 class="element__title">Карачаевск</h2>
             <button class="element__like-button" type="button"></button>
           </div>
-        </article>
+        </article> -->
     </section>
   </main>
   <footer class="footer">
     <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
   </footer>
-  <div class="popup">
+  <div class="popup popup_profile">
     <div class="popup__container">
       <button class="popup__close-button" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form id="popup__form" action="#" method="post" name="form">
+      <form id="popup__form-profile" action="#" method="post" name="form">
         <input type="text" placeholder="Имя" class="popup__input popup__input_type_name" value="Жак-Ив Кусто" name="name">
         <input type="text" placeholder="О себе" class="popup__input popup__input_type_text" value="Исследователь океана" name="text">
-        <button class="popup__sumbit-button" type="submit">Сохранить</button>
+        <button class="popup__sumbit-button popup__sumbit-button-profile" type="submit">Сохранить</button>
       </form>
     </div>
   </div>
-  <script src="./scripts/index.js"></script>
+  <div class="popup popup_element">
+    <div class="popup__container">
+      <button class="popup__close-button" type="button"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form id="popup__form-element" class="popup__form-element" action="#" method="post" name="form">
+        <input type="text" placeholder="Название" class="popup__input popup__input_type_names" value="" name="name">
+        <input type="text" placeholder="Ссылка на картинку" class="popup__input popup__input_type_link" value="Ссылка на картинку" name="text">
+        <button class="popup__sumbit-button popup__sumbit-button-form" type="submit">Создать</button>
+      </form>
+    </div>
+  </div>
+  <script src="./scripts/index.js" type="module"></script>
+  <!-- <script src="./scripts/template.js" type="module"></script> -->
+
+  <template class="element-template">
+    <article class="element__card">
+      <button class="element__delete-button" type="button"></button>
+      <img src="" alt="" class="element__img">
+      <div class="element__figcaption">
+        <a href="" class="element__link"><h2 class="element__title">Вовнушки</h2></a>
+        <button class="element__like-button" type="button"></button>
+      </div>
+    </article>
+  </template>
+
 </body>
 </html>

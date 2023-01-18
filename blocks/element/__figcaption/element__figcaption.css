@@ -1,4 +1,5 @@
 .element__figcaption {
   display: flex;
   padding: 17px 21px 31px;
+  justify-content: space-between;
 }

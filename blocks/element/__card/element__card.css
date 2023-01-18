@@ -1,5 +1,7 @@
 .element__card {
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    margin: 0;
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin: 0;
+  width: 282px;
 }

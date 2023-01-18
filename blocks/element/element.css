@@ -4,6 +4,18 @@
     gap: 20px 17px;
     justify-content: center;
 }
+
+.element__delete-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: url(../../images/group.svg);
+  width: 18px;
+  height: 19px;
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   .element {
     flex-direction: column;
