@@ -126,16 +126,13 @@ function addCardEventListeners(card) {
   imageClick.addEventListener('click', openImagePopup);
 }
 
-function popupImage() {
-  const popupImg = document.querySelector('.popup__image');
-}
+const popupImg = document.querySelector('.popup__image');
 
 function createCard(text) {
   const card = elementTemplate.cloneNode(true);
   const cardTitle = card.querySelector('.element__title');
   const cardLink = card.querySelector('.element__link');
   const cardImg = card.querySelector('.element__img');
-  const popupImg = document.querySelector('.popup__image');
   cardTitle.textContent = text.name;
   cardLink.href = text.link;
   cardImg.src = text.link;
