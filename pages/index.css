@@ -29,7 +29,7 @@
 @import url(../blocks/popup/__sumbit-button/popup__sumbit-button.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
-@import url(../blocks/popup/_theme-white/_theme_white.css);
+@import url(../blocks/popup/__title-image/popup__title-image.css);
 @import url(../blocks/popup/__contain/popup__contain.css);
 @import url(../blocks/popup/__image/popup__image.css);
 

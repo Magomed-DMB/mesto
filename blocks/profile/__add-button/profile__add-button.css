@@ -9,6 +9,7 @@
   box-sizing: content-box;
   border: 2px solid #FFFFFF;
   border-radius: 2px;
+  transition: opacity 100ms;
 }
 .profile__add-button:hover {
   opacity: 0.6;

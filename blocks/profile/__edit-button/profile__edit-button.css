@@ -7,6 +7,7 @@
   height: 24px;
   border: 1px solid #FFFFFF;
   align-self: center;
+  transition: opacity 100ms;
 }
 .profile__edit-button:hover {
   opacity: 0.6;

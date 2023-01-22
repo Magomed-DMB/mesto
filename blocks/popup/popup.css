@@ -8,4 +8,7 @@
   justify-content: center;
   align-items:  flex-start;
   display: none;
+  transition: visibility 700ms, opacity 1s ease;
+  visibility: hidden;
+  opacity: 0;
 }
