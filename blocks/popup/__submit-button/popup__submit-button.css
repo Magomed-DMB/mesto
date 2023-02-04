@@ -1,4 +1,4 @@
-.popup__sumbit-button {
+.popup__submit-button {
   width: 358px;
   background: #000000;
   border-radius: 2px;
@@ -9,14 +9,22 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  border: none;
+  border-color: #000000;
   cursor: pointer;
 }
-.popup__sumbit-button:hover {
+
+.popup__button_disabled {
+  color: #000000;
+  background-color: #E5E5E5;
+  border: 1px solid #000000;
+}
+
+.popup__submit-button:hover:valid {
   background: rgba(0, 0, 0, 0.8);
 }
+
 @media (max-width: 767px) {
-  .popup__sumbit-button {
+  .popup__submit-button {
     width: 238px;
     font-size: 14px;
     line-height: 17px;

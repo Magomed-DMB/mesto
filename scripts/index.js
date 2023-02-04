@@ -70,11 +70,11 @@ function addCard(card) {
 }
 
 function deleteCard(event) {
-  const card = event.target.closest('.element__card').remove();
+  event.target.closest('.element__card').remove();
 }
 
 function likeCard(event) {
-  const card = event.target.classList.toggle('element__like-button_active');
+  event.target.classList.toggle('element__like-button_active');
 }
 
 function openImagePopup(card) {
@@ -126,6 +126,21 @@ function submitFormElement(event) {
   closeElementPopup(event);
   formElement.reset();
 }
+
+const closePopups = Array.from(document.querySelectorAll('.popup'));
+closePopups.forEach((popup) => {
+  document.addEventListener('keydown', (e) => {
+    if (popup.classList.contains('popup') && e.key === 'Escape') {
+      closePopup(popup);
+    }
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('popup')) {
+      closePopup(e.target);
+    }
+  })
+  })
+})
+
 
 formElement.addEventListener('submit', submitFormElement);
 

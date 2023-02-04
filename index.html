@@ -31,10 +31,30 @@
     <div class="popup__container">
       <button class="popup__close-button" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form-profile" action="#" method="post" name="form">
-        <input type="text" placeholder="Имя" class="popup__input popup__input_type_name" value="" name="name">
-        <input type="text" placeholder="О себе" class="popup__input popup__input_type_text" value="" name="text">
-        <button class="popup__sumbit-button popup__sumbit-button-profile" type="submit">Сохранить</button>
+      <form class="popup__form popup__form-profile" method="POST" name="form">
+        <input
+          id="name-input"
+          class="popup__input popup__input_type_name"
+          type="text"
+          placeholder="Имя"
+          value=""
+          name="name"
+          minlength="2" maxlength="40"
+          required
+        />
+        <span class="popup__error name-input-error"></span>
+        <input
+          id="text-input"
+          class="popup__input popup__input_type_text"
+          type="text"
+          placeholder="О себе"
+          value=""
+          name="text"
+          minlength="2" maxlength="200"
+          required
+        />
+        <span class="popup__error text-input-error"></span>
+        <button class="popup__submit-button popup__sumbit-button-profile" type="submit">Сохранить</button>
       </form>
     </div>
   </div>
@@ -42,10 +62,29 @@
     <div class="popup__container">
       <button class="popup__close-button" type="button"></button>
       <h2 class="popup__title">Новое место</h2>
-      <form class="popup__form-element" action="#" method="post" name="form">
-        <input type="text" placeholder="Название" class="popup__input popup__input_type_names" value="" name="name">
-        <input type="text" placeholder="Ссылка на картинку" class="popup__input popup__input_type_link" value="" name="text">
-        <button class="popup__sumbit-button popup__sumbit-button-form" type="submit">Создать</button>
+      <form class="popup__form popup__form-element" action="" method="post" name="form">
+        <input
+        id="name-input-img"
+        class="popup__input popup__input_type_names"
+        type="text"
+        placeholder="Название"
+        value=""
+        name="name"
+        minlength="2" maxlength="30"
+        required
+        />
+        <span class="popup__error name-input-img-error"></span>
+        <input
+        id="text-input-url"
+        class="popup__input popup__input_type_link"
+        type="url"
+        placeholder="Ссылка на картинку"
+        value=""
+        name="text"
+        required
+        />
+        <span class="popup__error text-input-url-error"></span>
+        <button class="popup__submit-button popup__sumbit-button-form popup__button_disabled" type="submit">Создать</button>
       </form>
     </div>
   </div>
@@ -69,6 +108,7 @@
   </template>
 
   <script src="./scripts/card.js"></script>
+  <script src="./scripts/validate.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
