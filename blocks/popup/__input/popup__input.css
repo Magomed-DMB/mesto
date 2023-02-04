@@ -15,8 +15,8 @@
   margin: 26px 0 0;
 }
 .popup__input:valid {
-  border-bottom: 1px solid green;;
+  border-bottom: 1px solid green;
 }
 .popup__input:invalid {
-  border-bottom: 1px solid red;;
+  border-bottom: 1px solid red;
 }
