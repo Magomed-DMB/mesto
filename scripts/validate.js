@@ -47,13 +47,20 @@ function hasInvalidInput (inputList) {
 });
 }
 
-function toggleButtonState(inputList, buttonElement, object) {
+function disableSubmitButton(buttonElement) {
+  buttonElement.classList.add('popup__button_disabled');
+  buttonElement.setAttribute("disabled", true);
+}
+function enableSubmitButton(buttonElement) {
+  buttonElement.classList.remove('popup__button_disabled');
+  buttonElement.removeAttribute("disabled");
+}
+
+function toggleButtonState(inputList, buttonElement) {
   if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(object.inactiveButtonClass);
-    buttonElement.setAttribute('disabled', true);
+    disableSubmitButton(buttonElement);
   } else {
-    buttonElement.classList.remove(object.inactiveButtonClass);
-    buttonElement.removeAttribute('disabled');
+    enableSubmitButton(buttonElement);
   }
 }
 

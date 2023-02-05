@@ -26,8 +26,25 @@ function openPopup(popup) {
 };
 
 function closePopup(popup) {
-    popup.classList.remove('popup_opened');
+  popup.classList.remove('popup_opened');
+  const submitElement = popup.querySelector('.popup__submit-button');
+  disableSubmitButton(submitElement);
 };
+
+const hadleEscKeyup = (evt) => {
+  evt.preventDefault();
+  if (evt.key = 'Escape') {
+    const activPopup = document.querySelector('.popup_opened');
+    closePopup(activPopup);
+  }
+}
+const hadleOverlayClick = (e) => {
+  if (e.target.classList.contains('popup_opened')) {
+        closePopup(e.target);
+  }
+}
+document.addEventListener('keyup', hadleEscKeyup);
+document.addEventListener('click', hadleOverlayClick);
 
 function openProfilePopup() {
   nameInput.value = profileName.textContent;
@@ -126,21 +143,6 @@ function submitFormElement(event) {
   closeElementPopup(event);
   formElement.reset();
 }
-
-const closePopups = Array.from(document.querySelectorAll('.popup'));
-closePopups.forEach((popup) => {
-  document.addEventListener('keydown', (e) => {
-    if (popup.classList.contains('popup') && e.key === 'Escape') {
-      closePopup(popup);
-    }
-  document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('popup')) {
-      closePopup(e.target);
-    }
-  })
-  })
-})
-
 
 formElement.addEventListener('submit', submitFormElement);
 
