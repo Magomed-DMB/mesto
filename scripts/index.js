@@ -23,6 +23,8 @@ const popupImage = popupViewImage.querySelector(".popup__image");
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', hadleEscKeyup);
+  document.addEventListener('click', hadleOverlayClick);
 };
 
 function closePopup(popup) {
@@ -31,20 +33,17 @@ function closePopup(popup) {
   disableSubmitButton(submitElement);
 };
 
-const hadleEscKeyup = (evt) => {
-  evt.preventDefault();
-  if (evt.key = 'Escape') {
+function hadleEscKeyup(e) {
+  if (e.key === 'Escape') {
     const activPopup = document.querySelector('.popup_opened');
     closePopup(activPopup);
   }
 }
-const hadleOverlayClick = (e) => {
+function hadleOverlayClick(e) {
   if (e.target.classList.contains('popup_opened')) {
         closePopup(e.target);
   }
 }
-document.addEventListener('keyup', hadleEscKeyup);
-document.addEventListener('click', hadleOverlayClick);
 
 function openProfilePopup() {
   nameInput.value = profileName.textContent;
