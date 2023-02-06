@@ -23,15 +23,16 @@ const popupImage = popupViewImage.querySelector(".popup__image");
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  document.addEventListener('keydown', hadleEscKeyup);
-  document.addEventListener('click', hadleOverlayClick);
 };
 
+const submitElement = document.querySelector('.popup__submit-button');
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-  const submitElement = popup.querySelector('.popup__submit-button');
   disableSubmitButton(submitElement);
 };
+
+document.addEventListener('keydown', hadleEscKeyup);
+document.addEventListener('click', hadleOverlayClick);
 
 function hadleEscKeyup(e) {
   if (e.key === 'Escape') {
