@@ -23,16 +23,15 @@ const popupImage = popupViewImage.querySelector(".popup__image");
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', hadleEscKeyup);
+  popup.addEventListener('click', hadleOverlayClick);
 };
 
-const submitElement = document.querySelector('.popup__submit-button');
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-  disableSubmitButton(submitElement);
+  document.removeEventListener('keydown', hadleEscKeyup);
+  popup.removeEventListener('click', hadleOverlayClick);
 };
-
-document.addEventListener('keydown', hadleEscKeyup);
-document.addEventListener('click', hadleOverlayClick);
 
 function hadleEscKeyup(e) {
   if (e.key === 'Escape') {
@@ -46,13 +45,23 @@ function hadleOverlayClick(e) {
   }
 }
 
+function submitElementBlock() {
+const submitElement = document.querySelectorAll('.popup__submit-button');
+submitElement.forEach((block) => {
+    disableSubmitButton(block);
+})
+}
+
 function openProfilePopup() {
   nameInput.value = profileName.textContent;
   jobInput.value = profileDescription.textContent;
   openPopup(popupProfileOpen);
+  submitElementBlock();
+
 };
 function openElementPopup() {
   openPopup(popupElementOpen);
+  submitElementBlock();
 };
 
 function closeProfilePopup() {

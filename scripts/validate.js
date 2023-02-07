@@ -49,11 +49,11 @@ function hasInvalidInput (inputList) {
 
 function disableSubmitButton(buttonElement) {
   buttonElement.classList.add('popup__button_disabled');
-  buttonElement.setAttribute("disabled", true);
+  buttonElement.setAttribute('disabled', true);
 }
 function enableSubmitButton(buttonElement) {
   buttonElement.classList.remove('popup__button_disabled');
-  buttonElement.removeAttribute("disabled");
+  buttonElement.removeAttribute('disabled');
 }
 
 function toggleButtonState(inputList, buttonElement) {
