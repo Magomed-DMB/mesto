@@ -42,7 +42,7 @@ function openImagePopup(link, name) {
   popupImage.src = link;
   popupImage.alt = name;
   popupImageTitle.textContent = name;
-  // openPopup(popupViewImage);
+  openPopup(popupViewImage);
 }
 
 // Закрытие попапа
