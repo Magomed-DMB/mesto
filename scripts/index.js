@@ -1,5 +1,5 @@
-import Card from '/Card.js';
-import FormValidator from '/FormValidator.js';
+import Card from 'mesto/scripts/Card.js';
+import FormValidator from 'mesto/scripts/FormValidator.js';
 
 const popupProfileOpen = document.querySelector('.popup_profile');
 const popupElementOpen = document.querySelector('.popup_element');
