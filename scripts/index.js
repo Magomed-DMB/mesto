@@ -1,8 +1,8 @@
-import Card from './card.js';
+import Card from './Card.js';
 import FormValidator from './FormValidator.js';
 
-const popupProfileOpen = document.querySelector('.popup_profile');
-const popupElementOpen = document.querySelector('.popup_element');
+const formEditProfile = document.querySelector('.popup_profile');
+const formAddCard = document.querySelector('.popup_element');
 const popupFormProfile = document.querySelector('.popup__form-profile');
 
 const buttonProfileEdit = document.querySelector('.profile__edit-button');
@@ -35,7 +35,7 @@ function openPopup(popup) {
 function openProfilePopup() {
   nameInput.value = profileName.textContent;
   jobInput.value = profileDescription.textContent;
-  // openPopup(popupProfileOpen);
+  // openPopup(formEditProfile);
 };
 
 function openImagePopup(link, name) {
@@ -52,10 +52,10 @@ function closePopup(popup) {
   popup.removeEventListener('click', hadleOverlayClick);
 };
 function closeProfilePopup() {
-  closePopup(popupProfileOpen);
+  closePopup(formEditProfile);
 };
 function closeElementPopup() {
-  closePopup(popupElementOpen);
+  closePopup(formAddCard);
 };
 // Закрытие попапа нажатием кнопки ESC
 function hadleEscKeyup(e) {
@@ -94,24 +94,24 @@ buttonCloseList.forEach((button) => {
   button.addEventListener("click", () => closePopup(currentPopup));
 });
 
-const validateProfileForm = new FormValidator(config, popupProfileOpen);
-const validateElementForm = new FormValidator(config, popupElementOpen);
+const validateProfileForm = new FormValidator(config, formEditProfile);
+const validateElementForm = new FormValidator(config, formAddCard);
 
 validateProfileForm.enableValidation();
 validateElementForm.enableValidation();
 
 buttonProfileEdit.addEventListener("click", () => {
-  validateProfileForm._resetValidationInput();
-  openPopup(popupProfileOpen);
+  validateProfileForm.resetValidationInput();
+  openPopup(formEditProfile);
   openProfilePopup();
 });
 
 buttonElementAdd.addEventListener("click", () => {
-  validateElementForm._resetValidationInput();
-  openPopup(popupElementOpen);
+  validateElementForm.resetValidationInput();
+  openPopup(formAddCard);
 });
 
-function handleFormSubmit (event) {
+function submitEditProfileForm (event) {
   event.preventDefault();
   profileName.textContent = nameInput.value;
   profileDescription.textContent = jobInput.value;
@@ -134,6 +134,6 @@ function submitFormElement(event) {
   formElement.reset();
 }
 
-popupProfileOpen.addEventListener('submit', handleFormSubmit);
-popupElementOpen.addEventListener('submit', submitFormElement);
+formEditProfile.addEventListener('submit', submitEditProfileForm);
+formAddCard.addEventListener('submit', submitFormElement);
 renderElements(initialCards);
